@@ -1,13 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gustavomendez.tokin.PerfilFragment">
-
-
-    <!-- TODO: Update blank fragment layout -->
-
+    tools:context="com.example.gustavomendez.tokin.DetailActivity">
 
     <ImageView
         android:id="@+id/imageDetail"
@@ -28,7 +25,7 @@
         android:layout_height="31dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:text="Nombre Perfil"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
@@ -40,17 +37,17 @@
 
     <TextView
         android:id="@+id/textDireccionCDetail"
-        android:layout_width="133dp"
-        android:layout_height="25dp"
+        android:layout_width="241dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:text="Nombre Contacto"
+        android:layout_marginTop="12dp"
+        android:text="Contacto Direccion"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
 
@@ -72,12 +69,12 @@
 
     <TextView
         android:id="@+id/textHorarioDetail"
-        android:layout_width="204dp"
-        android:layout_height="29dp"
+        android:layout_width="297dp"
+        android:layout_height="37dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        android:text="TextView@email.com"
+        android:text="Lunes a Domingo de 13:00 a 20:00"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="16sp"
@@ -86,33 +83,60 @@
         app:layout_constraintTop_toBottomOf="@+id/textTelDetail" />
 
     <Button
-        android:id="@+id/buttonEditPerfil"
+        android:id="@+id/buttonSolicitarTokin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginTop="40dp"
-        android:text="Editar"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHorarioDetail"
+        tools:text="Solicitar Tokin" />
+
+    <Button
+        android:id="@+id/buttonVerEvaluaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Ver Evaluaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/textHorarioDetail" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonChatear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Chatear"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSolicitarTokin" />
+
+    <Button
+        android:id="@+id/buttonEvaluar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:text="Ver Comentarios"
+        android:layout_marginTop="8dp"
+        android:text="Evaluar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/textHorarioDetail" />
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVerEvaluaciones" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="192dp" />
-</android.support.constraint.ConstraintLayout>
 
+</android.support.constraint.ConstraintLayout>
