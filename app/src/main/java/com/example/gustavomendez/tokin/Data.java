@@ -1,9 +1,7 @@
 package com.example.gustavomendez.tokin;
 
 
-/**
- * Created by gustavomendez on 06/02/18.
- */
+
 public class Data {
 
     static String[] androidNames = {"Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice Cream Sandwich","JellyBean", "Kitkat", "Lollipop", "Marshmallow"};

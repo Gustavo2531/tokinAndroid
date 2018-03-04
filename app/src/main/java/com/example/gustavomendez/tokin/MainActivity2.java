@@ -26,14 +26,19 @@ public class MainActivity2 extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton msj = (FloatingActionButton) findViewById(R.id.fab);
+        msj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Send a message", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.uno, new RestaurantsListFragment());
+        fragmentTransaction.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -85,29 +90,27 @@ public class MainActivity2 extends AppCompatActivity
 
         Fragment fragment = null;
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_messages) {
 
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.uno, new MatchesListFragment());
+            fragmentTransaction.replace(R.id.uno, new MessagesFragment());
             fragmentTransaction.commit();
 
 
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_search) {
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.uno, new MatchesListFragment());
+            fragmentTransaction.replace(R.id.uno, new RestaurantsListFragment());
             fragmentTransaction.commit();
 
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_calendar) {
 
-        } else if (id == R.id.nav_manage) {
+        }else if (id == R.id.nav_profile) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_requests) {
 
         }
 

@@ -20,13 +20,11 @@ import java.util.ArrayList;
 
 
 
-/**
- * A simple {@link ListFragment} subclass.
- */
-public class MatchesListFragment extends ListFragment {
+
+public class RestaurantsListFragment extends ListFragment {
 
 
-    public MatchesListFragment() {
+    public RestaurantsListFragment() {
         // Required empty public constructor
     }
 
@@ -35,36 +33,34 @@ public class MatchesListFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_matches_list, container, false);
+        return inflater.inflate(R.layout.fragment_restaurant_list, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 
         super.onActivityCreated(savedInstanceState);
-        SoccerAdapter adapter = getAdapter();
+        RestaurantAdapter adapter = getAdapter();
         setListAdapter(adapter);
 
     }
 
-    private SoccerAdapter getAdapter(){
-        SoccerAdapter adapter = new SoccerAdapter(
-                getActivity(), R.layout.soccer_matches_layout,
-                new ArrayList<Match>());
+    private RestaurantAdapter getAdapter(){
+        RestaurantAdapter adapter = new RestaurantAdapter(
+                getActivity(), R.layout.restaurants_layout,
+                new ArrayList<Restaurant>());
         try {
             JSONObject jsonObject = new JSONObject(getJSON());
-            JSONArray jsonArray = jsonObject.getJSONArray("rounds");
+            JSONArray jsonArray = jsonObject.getJSONArray("mxcity");
             for (int i = 0; i< jsonArray.length(); i++){
                 JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-                JSONArray matches = jsonObject1.getJSONArray("matches");
+                JSONArray matches = jsonObject1.getJSONArray("places");
                 for (int j = 0; j< matches.length(); j++){
-                    JSONObject unMatch = matches.getJSONObject(j);
-                    Match m = new Match();
-                    m.fecha = unMatch.getString("date");
-                    m.equipo01 = unMatch.getJSONObject("team1").getString("name");
-                    m.equipo02 = unMatch.getJSONObject("team2").getString("name");
-                    m.marcador01 = unMatch.getInt("score1");
-                    m.marcador02 = unMatch.getInt("score1");
+                    JSONObject rest = matches.getJSONObject(j);
+                    Restaurant m = new Restaurant();
+                    m.name = rest.getString("name");
+                    m.address = rest.getString("address");
+                    m.phone = rest.getInt("phone");
                     adapter.add(m);
 
                 }
@@ -80,7 +76,7 @@ public class MatchesListFragment extends ListFragment {
 
     private String getJSON() {
         try {
-            InputStream inputStream = getActivity().getAssets().open("lisgaespanola.json");
+            InputStream inputStream = getActivity().getAssets().open("restaurant.json");
             int s = inputStream.available();
             byte[] archivo = new byte[s];
             inputStream.read(archivo);

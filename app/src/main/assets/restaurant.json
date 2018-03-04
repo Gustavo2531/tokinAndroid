@@ -1,0 +1,29 @@
+{
+  "name": "Restaurantes y Bares",
+  "mxcity": [
+    {
+      "places": [
+        {
+          "name": "La Rica",
+          "address": "Avenida Juarez 23",
+          "phone": "55678493023"
+        },
+        {
+          "name": "Los Camarones Diablos",
+          "address": "Avenida Juarez 23",
+          "phone": "55678493023"
+        },
+        {
+          "name": "La Buena",
+          "address": "Avenida Juarez 23",
+          "phone": "55678493023"
+        },
+        {
+          "name": "Bar Romero",
+          "address": "Avenida Juarez 23",
+          "phone": "55678493023"
+        }
+      ]
+    }
+      ]
+    }
