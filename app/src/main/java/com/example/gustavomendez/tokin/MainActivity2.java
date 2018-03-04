@@ -107,8 +107,15 @@ public class MainActivity2 extends AppCompatActivity
 
 
         } else if (id == R.id.nav_calendar) {
-
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.uno, new CalendarFragment());
+            fragmentTransaction.commit();
         }else if (id == R.id.nav_profile) {
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.uno, new PerfilFragment());
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_requests) {
 
