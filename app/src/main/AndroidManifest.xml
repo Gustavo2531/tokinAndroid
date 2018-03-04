@@ -25,7 +25,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".EditPerfilActivity" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".SolicitarActivity"></activity>
+        <activity android:name=".SolicitarActivity" />
+        <activity android:name=".AgregarEventoActivity"></activity>
     </application>
 
 </manifest>

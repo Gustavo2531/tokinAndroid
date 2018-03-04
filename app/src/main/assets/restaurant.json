@@ -6,22 +6,26 @@
         {
           "name": "La Rica",
           "address": "Avenida Juarez 23",
-          "phone": "55678493023"
+          "phone": "55678493023",
+          "id":1
         },
         {
           "name": "Los Camarones Diablos",
           "address": "Avenida Juarez 23",
-          "phone": "55678493023"
+          "phone": "55678493023",
+          "id":2
         },
         {
           "name": "La Buena",
           "address": "Avenida Juarez 23",
-          "phone": "55678493023"
+          "phone": "55678493023",
+          "id":3
         },
         {
           "name": "Bar Romero",
           "address": "Avenida Juarez 23",
-          "phone": "55678493023"
+          "phone": "55678493023",
+          "id":4
         }
       ]
     }
