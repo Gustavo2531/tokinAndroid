@@ -89,11 +89,10 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:onClick="clickSolicitarEvento"
-        android:text="Button"
+        android:text="Solicitar Tokin"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHorarioDetail"
-        tools:text="Solicitar Tokin" />
+        app:layout_constraintTop_toBottomOf="@+id/textHorarioDetail" />
 
     <Button
         android:id="@+id/buttonVerEvaluaciones"

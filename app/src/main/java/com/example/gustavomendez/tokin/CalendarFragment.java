@@ -3,11 +3,13 @@ package com.example.gustavomendez.tokin;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -34,8 +36,23 @@ public class CalendarFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_calendar, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
+        Button button = (Button) rootView.findViewById(R.id.buttonAgregarEvento);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateDetail();
+            }
+        });
+        return rootView;
     }
+
+    public void updateDetail() {
+        Intent it = new Intent( getActivity() , AgregarEventoActivity.class);
+        startActivity(it);
+    }
+
 
 
     @Override
