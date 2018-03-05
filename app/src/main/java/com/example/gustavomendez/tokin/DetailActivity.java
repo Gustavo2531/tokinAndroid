@@ -30,5 +30,18 @@ public class DetailActivity extends Activity {
         Intent it = new Intent( DetailActivity.this, SolicitarActivity.class);
         startActivity(it);
     }
+    public void clickEvaluar(View view){
+        Intent it = new Intent( DetailActivity.this, EvaluarActivity.class);
+        startActivity(it);
+    }
+
+    public void clickVerEvalauciones(View view){
+        Intent it = new Intent( DetailActivity.this, VerEvaluacionesActivity.class);
+        startActivity(it);
+    }
+    public void clickChater(View view){
+        Intent it = new Intent( DetailActivity.this, ChatActivity.class);
+        startActivity(it);
+    }
 
 }

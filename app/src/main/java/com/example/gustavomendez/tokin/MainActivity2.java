@@ -118,6 +118,12 @@ public class MainActivity2 extends AppCompatActivity
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_requests) {
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.uno, new RequestsFragment());
+            fragmentTransaction.commit();
+
+
 
         }
 
