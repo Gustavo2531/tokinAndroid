@@ -9,6 +9,21 @@
     <!-- TODO: Update blank fragment layout -->
 
 
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="204dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/two" />
+
     <ImageView
         android:id="@+id/imageDetail"
         android:layout_width="173dp"
@@ -39,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textDireccionCDetail"
+        android:id="@+id/one"
         android:layout_width="133dp"
         android:layout_height="25dp"
         android:layout_marginEnd="8dp"
@@ -55,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
 
     <TextView
-        android:id="@+id/textTelDetail"
+        android:id="@+id/two"
         android:layout_width="130dp"
         android:layout_height="23dp"
         android:layout_marginEnd="8dp"
@@ -67,33 +82,34 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDireccionCDetail"
+        app:layout_constraintTop_toBottomOf="@+id/one"
         tools:text="55-84-90-20-30" />
 
     <TextView
-        android:id="@+id/textHorarioDetail"
+        android:id="@+id/four"
         android:layout_width="204dp"
         android:layout_height="29dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:text="TextView@email.com"
+        android:layout_marginTop="56dp"
+        android:text="-"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTelDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/two" />
 
     <Button
         android:id="@+id/buttonEditPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="88dp"
         android:text="Editar"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/textHorarioDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/four" />
 
     <Button
         android:id="@+id/button4"
@@ -101,12 +117,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="88dp"
         android:text="Ver Comentarios"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/textHorarioDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/four" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -114,5 +130,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="192dp" />
+
 </android.support.constraint.ConstraintLayout>
 

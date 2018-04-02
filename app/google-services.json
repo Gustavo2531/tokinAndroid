@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "461258558251",
+    "firebase_url": "https://tokin-a743d.firebaseio.com",
+    "project_id": "tokin-a743d",
+    "storage_bucket": "tokin-a743d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461258558251:android:993cad114415fef7",
+        "android_client_info": {
+          "package_name": "com.example.gustavomendez.tokin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461258558251-18ppsopb4fk8lstp94kk1cgoaaep1c16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gustavomendez.tokin",
+            "certificate_hash": "181596c3d06eb96fcc553f4cce96e3821d4889ae"
+          }
+        },
+        {
+          "client_id": "461258558251-quok2p0f7k06l0f7sa149c62nu2ni75v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY1-S0n5IJr3wR6f-1XJWYL3BFjVidKn0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461258558251-quok2p0f7k06l0f7sa149c62nu2ni75v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
