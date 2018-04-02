@@ -15,7 +15,7 @@ public class DetailActivity extends Activity {
         nameText = (TextView)findViewById(R.id.textNameDetail);
        textAddress = (TextView)findViewById(R.id.one);
         textTel = (TextView)findViewById(R.id.two);
-        Integer id = (Integer)getIntent().getSerializableExtra("id");
+        String id = (String)getIntent().getSerializableExtra("id");
         String tel = (String)getIntent().getSerializableExtra("tel");
         String name = (String)getIntent().getSerializableExtra("name");
         String dir = (String)getIntent().getSerializableExtra("address");
