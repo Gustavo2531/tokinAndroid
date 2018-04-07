@@ -32,13 +32,17 @@ public class DatePickerFragment extends DialogFragment implements
 
             // Create a new instance of DatePickerDialog and return it
 
-            return new DatePickerDialog(getActivity(), this, year, month, day);
+            return new DatePickerDialog(getActivity(), android.R.style.Theme_Holo_Light_Dialog_NoActionBar,this, year, month, day);
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
             // do some stuff for example write on log and update TextField on activity
 
             TextView f=(TextView) getActivity().findViewById(R.id.textViewDateEventP);
-            f.setText(""+year+"-"+(month+1)+"-"+day);
+            if(month+1<10){
+                f.setText(""+year+"-0"+(month+1)+"-"+day);
+            }else{
+                f.setText(""+year+"-"+(month+1)+"-"+day);
+            }
         }
     }

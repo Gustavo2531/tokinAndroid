@@ -57,35 +57,46 @@ public class AgregarEventoActivity extends Activity {
     }
     public void onClickAgregar(View v){
 
-        String dateB=dateView.getText().toString();
-        dateB=dateB+"T"+timeViewB.getText().toString()+":00.598Z";
+        if(r==true&&l==true){
+            String dateB=dateView.getText().toString();
+            dateB=dateB+"T"+timeViewB.getText().toString()+":00.598Z";
 
-        //String dateE=dateView.getText().toString();
-        //dateE.concat("T"+timeViewB.getText().toString()+":00.598Z");
+            //String dateE=dateView.getText().toString();
+            //dateE.concat("T"+timeViewB.getText().toString()+":00.598Z");
 
 
-        String s =timeViewB.getText().toString().charAt(0)+""+timeViewB.getText().toString().charAt(1);
-        String dateE;
-        Integer m = Integer.parseInt(s);
-        Integer dur=Integer.parseInt(duracionP.getText().toString());
-        if((m+dur)>=24){
-            dateE=dateView.getText().toString();
-            dateE=dateE.substring(0,7);
-            String dateAux = dateView.getText().toString();
-            Integer newDay = Integer.parseInt(dateAux.substring(8,9));
-            newDay+=1;
-            dateE=dateE+newDay+"T"+timeViewB.getText().toString()+":00.598Z";
+            String s =timeViewB.getText().toString().charAt(0)+""+timeViewB.getText().toString().charAt(1);
+            String dateE;
+            Integer m = Integer.parseInt(s);
+            Integer dur=Integer.parseInt(duracionP.getText().toString());
+            if((m+dur)>=24){
+                dateE=dateView.getText().toString();
+                dateE=dateE.substring(0,8);
+                String dateAux = dateView.getText().toString();
+
+                Integer newDay = Integer.parseInt(dateAux.substring(8,dateView.getText().length()));
+                newDay+=1;
+                int timeE=Integer.parseInt(timeViewB.getText().toString());
+                dateE=dateE+newDay+"T"+timeE+":00.598Z";
+            }else{
+                dateE=dateView.getText().toString();
+                int timeE=Integer.parseInt(timeViewB.getText().toString());
+                dateE=dateE+"T"+timeE+":00.598Z";
+            }
+
+            KeyUser keyUser = new KeyUser();
+            keyUser.start();
+            EventPojo chatPojo = new EventPojo("Evento Privado","Evento Privado", keyUser.KU,keyUser.KU,keyUser.KU,keyUser.KU,2,dateB,dateE);
+            databaseReference.push().setValue(chatPojo);
+            duracionP.setText("");
+            Toast.makeText(getApplicationContext(), "Evento Guardado",
+                    Toast.LENGTH_SHORT)
+                    .show();
         }else{
-            dateE=dateView.getText().toString();
-            dateE=dateE+"T"+timeViewB.getText().toString()+":00.598Z";
+            Toast.makeText(getApplicationContext(), "Elige Dia y hora",
+                    Toast.LENGTH_SHORT)
+                    .show();
         }
-
-        KeyUser keyUser = new KeyUser();
-        keyUser.start();
-        EventPojo chatPojo = new EventPojo("Evento Privado","Evento Privado", keyUser.KU,keyUser.KU,keyUser.KU,keyUser.KU,2,dateB,dateE);
-        databaseReference.push().setValue(chatPojo);
-        duracionP.setText("");
-
     }
     /**
     @SuppressWarnings("deprecation")

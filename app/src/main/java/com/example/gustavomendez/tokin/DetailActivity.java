@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class DetailActivity extends Activity {
     private TextView nameText, textAddress, textTel;
+    private  String id, tel, name, dir;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,10 +16,10 @@ public class DetailActivity extends Activity {
         nameText = (TextView)findViewById(R.id.textNameDetail);
        textAddress = (TextView)findViewById(R.id.one);
         textTel = (TextView)findViewById(R.id.two);
-        String id = (String)getIntent().getSerializableExtra("id");
-        String tel = (String)getIntent().getSerializableExtra("tel");
-        String name = (String)getIntent().getSerializableExtra("name");
-        String dir = (String)getIntent().getSerializableExtra("address");
+        id = (String)getIntent().getSerializableExtra("id");
+        tel = (String)getIntent().getSerializableExtra("tel");
+        name = (String)getIntent().getSerializableExtra("name");
+        dir = (String)getIntent().getSerializableExtra("address");
 
         nameText.setText(" "+name);
        textTel.setText(""+tel);
@@ -28,6 +29,10 @@ public class DetailActivity extends Activity {
     }
     public void clickSolicitarEvento(View view){
         Intent it = new Intent( DetailActivity.this, SolicitarActivity.class);
+        it.putExtra("id", id);
+        it.putExtra("name", name);
+        it.putExtra("address",dir);
+        it.putExtra("tel",tel);
         startActivity(it);
     }
     public void clickEvaluar(View view){
