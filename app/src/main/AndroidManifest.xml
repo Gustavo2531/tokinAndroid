@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gustavomendez.tokin">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:name=".FireApp"
@@ -40,6 +42,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".BandOrRestaurantActivity" />
         <activity android:name=".ProfileRestaurante"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
