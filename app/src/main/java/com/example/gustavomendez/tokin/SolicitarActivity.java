@@ -83,10 +83,32 @@ public class SolicitarActivity extends Activity {
             String dateAux = dateView.getText().toString();
             Integer newDay = Integer.parseInt(dateAux.substring(8,dateView.getText().length()));
             newDay+=1;
-            dateE=dateE+newDay+"T"+timeViewB.getText().toString()+":00.598Z";
+            int timeE=m+dur;
+            if(timeE==24){
+                timeE=0;
+            }
+            if(timeE==25){
+                timeE=1;
+            }
+            if(timeE==26){
+                timeE=2;
+            }
+            if(timeE==27){
+                timeE=3;
+            }
+            if(timeE==28){
+                timeE=4;
+            }
+            if(timeE==29){
+                timeE=5;
+            }
+
+            dateE=dateE+newDay+"T"+timeE+":00.598Z";
         }else{
             dateE=dateView.getText().toString();
-            dateE=dateE+"T"+timeViewB.getText().toString()+":00.598Z";
+            int timeE=m+dur;
+            dateE=dateE+"T"+timeE+":00.598Z";
+
         }
 
         KeyUser keyUser = new KeyUser();
