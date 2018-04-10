@@ -96,7 +96,7 @@ public class AgregarEventoActivity extends Activity {
                     timeE=5;
                 }
 
-                dateE=dateE+newDay+"T"+timeE+":00.598Z";
+                dateE=dateE+newDay+"T0"+timeE+":00.598Z";
             }else{
                 dateE=dateView.getText().toString();
                 int timeE=m+dur;
