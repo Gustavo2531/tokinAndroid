@@ -66,6 +66,7 @@ public class AgregarEventoActivity extends Activity {
 
 
             String s =timeViewB.getText().toString().charAt(0)+""+timeViewB.getText().toString().charAt(1);
+            String minutes = timeViewB.getText().toString().charAt(3)+""+timeViewB.getText().toString().charAt(4);
             String dateE;
             Integer m = Integer.parseInt(s);
             Integer dur=Integer.parseInt(duracionP.getText().toString());
@@ -95,12 +96,15 @@ public class AgregarEventoActivity extends Activity {
                 if(timeE==29){
                     timeE=5;
                 }
-
-                dateE=dateE+newDay+"T0"+timeE+":00.598Z";
+                System.out.println(""+m);
+                System.out.println(""+dur);
+                dateE=dateE+newDay+"T0"+timeE+":"+minutes+":00.598Z";
             }else{
                 dateE=dateView.getText().toString();
                 int timeE=m+dur;
-                dateE=dateE+"T"+timeE+":00.598Z";
+                System.out.println(""+m);
+                System.out.println(""+dur);
+                dateE=dateE+"T"+timeE+":"+minutes+":00.598Z";
             }
 
             KeyUser keyUser = new KeyUser();

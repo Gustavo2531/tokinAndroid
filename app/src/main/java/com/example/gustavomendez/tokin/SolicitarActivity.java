@@ -74,8 +74,10 @@ public class SolicitarActivity extends Activity {
 
 
         String s =timeViewB.getText().toString().charAt(0)+""+timeViewB.getText().toString().charAt(1);
+        String minutes = timeViewB.getText().toString().charAt(3)+""+timeViewB.getText().toString().charAt(4);
         String dateE;
         Integer m = Integer.parseInt(s);
+
         Integer dur=Integer.parseInt(duracionP.getText().toString());
         if((m+dur)>=24){
             dateE=dateView.getText().toString();
@@ -102,12 +104,12 @@ public class SolicitarActivity extends Activity {
             if(timeE==29){
                 timeE=5;
             }
+            dateE=dateE+newDay+"T0"+timeE+":"+minutes+":00.598Z";
 
-            dateE=dateE+newDay+"T0"+timeE+":00.598Z";
         }else{
             dateE=dateView.getText().toString();
             int timeE=m+dur;
-            dateE=dateE+"T"+timeE+":00.598Z";
+            dateE=dateE+"T"+timeE+":"+minutes+":00.598Z";
 
         }
 
