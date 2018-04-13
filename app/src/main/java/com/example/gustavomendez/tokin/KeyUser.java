@@ -15,7 +15,7 @@ import com.google.firebase.database.ValueEventListener;
 public class KeyUser {
     public static  String KU;
     DatabaseReference mDataRef;
-    public static String typeref;
+    public static String typeref, emailAddress;
     public static String userName,userContact,userType,musicType;
     public static  String Restaurant,Address,Phone,City;
 
@@ -29,6 +29,32 @@ public class KeyUser {
                     if (snapshot.getValue() != null) {
                         try {
                             typeref = snapshot.getValue().toString();
+                            Log.e("TAG", "" + snapshot.getValue());
+                            System.out.println(typeref);
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        Log.e("TAG", " it's null.");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        mDataRef.child("emailUser").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                try {
+                    if (snapshot.getValue() != null) {
+                        try {
+                            emailAddress = snapshot.getValue().toString();
                             Log.e("TAG", "" + snapshot.getValue());
                             System.out.println(typeref);
 

@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
 
     <TextView
-        android:id="@+id/two"
+        android:id="@+id/ttwo"
         android:layout_width="130dp"
         android:layout_height="23dp"
         android:layout_marginEnd="8dp"
@@ -79,7 +79,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/two" />
+        app:layout_constraintTop_toBottomOf="@+id/ttwo" />
 
     <Button
         android:id="@+id/buttonSolicitarTokin"

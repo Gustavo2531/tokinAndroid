@@ -21,9 +21,13 @@
             android:icon="@drawable/message"
             android:title="Mensajes" />
         <item
-            android:id="@+id/nav_requests"
-            android:icon="@drawable/bullhorn"
-            android:title="Solicitudes" />
+        android:id="@+id/nav_requests"
+        android:icon="@drawable/bullhorn"
+        android:title="Solicitudes" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Ayuda" />
     </group>
 
     <item android:title="Opciones">

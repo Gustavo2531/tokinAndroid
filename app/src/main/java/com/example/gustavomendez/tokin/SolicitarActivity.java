@@ -120,7 +120,6 @@ public class SolicitarActivity extends Activity {
                 res=false;
             }else{
 
-
             }
 
             String nomSing=keyUser.Restaurant.toString();

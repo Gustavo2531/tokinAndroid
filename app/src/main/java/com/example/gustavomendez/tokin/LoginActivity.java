@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,13 +29,12 @@ public class LoginActivity extends AppCompatActivity {
 
     Button loginBtn;
     EditText userEmailEdit, userPasswordEdit;
-
+    Button forgotPassword;
     //String Fields
     String userEmailString, userPasswordString;
 
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
-
     DatabaseReference mDatabaseRef;
 
     @Override
@@ -44,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = (Button) findViewById(R.id.loginBtn);
         userEmailEdit = (EditText) findViewById(R.id.loginEmailEditText);
         userPasswordEdit = (EditText) findViewById(R.id.loginPassWordEditText);
+        forgotPassword = (Button) findViewById(R.id.forgot);
 
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Users");
@@ -86,7 +88,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
+
+
         //ON CLICK LISTENER
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent in = new Intent( LoginActivity.this, ForgotPasswordActivity.class);
+                startActivity(in);
+
+            }
+        });
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

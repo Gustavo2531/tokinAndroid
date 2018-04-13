@@ -2,45 +2,56 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.loginpack.LoginActivity">
+    tools:context="com.example.gustavomendez.tokin.LoginActivity">
 
     <EditText
         android:id="@+id/loginEmailEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/loginPassWordEditText"
+        android:layout_marginTop="54dp"
         android:ems="10"
         android:hint="Enter Email"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="93dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/loginPassWordEditText"
-        android:layout_marginTop="54dp" />
+        tools:layout_editor_absoluteY="93dp" />
 
     <EditText
         android:id="@+id/loginPassWordEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/loginEmailEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="163dp"
-        android:layout_below="@+id/loginEmailEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="99dp" />
+        tools:layout_editor_absoluteY="163dp" />
 
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="252dp"
         android:layout_below="@+id/loginPassWordEditText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="58dp"
+        android:text="LOGIN"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <Button
+        android:id="@+id/forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginBtn"
+        android:layout_alignStart="@+id/loginBtn"
+        android:layout_below="@+id/loginBtn"
+        android:layout_marginTop="24dp"
+        android:text="Forgot Password" />
 
 </RelativeLayout>

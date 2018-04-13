@@ -55,17 +55,12 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-
-                if (user != null) {
-
-                    final String emailForVer = user.getEmail();
 
                     mUserCheckData.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
 
-                           // checkUserValidation(dataSnapshot, emailForVer);
+                           //checkUserValidation(dataSnapshot, emailForVer);
 
                         }
 
@@ -75,13 +70,10 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     });
 
-                } else {
-
-
                 }
 
 
-            }
+
         };
 
 

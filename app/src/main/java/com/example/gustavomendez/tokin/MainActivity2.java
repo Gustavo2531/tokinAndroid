@@ -42,12 +42,6 @@ public class MainActivity2 extends AppCompatActivity
 
                 FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                if (user != null)
-                {
-                }else
-                {
-
-                }
             }
         };
 
@@ -148,9 +142,11 @@ public class MainActivity2 extends AppCompatActivity
             FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.uno, new RequestsFragment());
             fragmentTransaction.commit();
-
-
-
+        } else if (id == R.id.nav_help) {
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.uno, new HpFragment());
+            fragmentTransaction.commit();
         }
 
         else if (id == R.id.nav_logout) {

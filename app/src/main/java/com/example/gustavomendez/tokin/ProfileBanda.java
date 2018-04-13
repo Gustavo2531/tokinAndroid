@@ -75,7 +75,6 @@ public class ProfileBanda extends AppCompatActivity {
                     keyUser.start();
 
                     Toast.makeText(ProfileBanda.this, "User profile added", Toast.LENGTH_LONG).show();
-
                     startActivity(new Intent(ProfileBanda.this, MainActivity2.class));
 
                 }
