@@ -115,19 +115,20 @@ public class SolicitarActivity extends Activity {
 
         KeyUser keyUser = new KeyUser();
         keyUser.start();
+            String nomSing="";
             if(keyUser.typeref.equals("band")) {
-
+                nomSing = keyUser.userName.toString();
                 res=false;
             }else{
-
+                nomSing=keyUser.Restaurant.toString();
             }
 
-            String nomSing=keyUser.Restaurant.toString();
+
             EventPojo chatPojo;
             if(res == true ) {
                 chatPojo = new EventPojo(""+name, ""+nomSing, keyUser.KU, id, id, keyUser.KU, 1, dateB, dateE);
             }else{
-                chatPojo = new EventPojo(""+nomSing, ""+name, id, keyUser.KU, keyUser.KU, id, 1, dateB, dateE);
+                chatPojo = new EventPojo(""+nomSing, ""+name, keyUser.KU, id, ""+keyUser.KU, id, 1, dateB, dateE);
             }
             databaseReference.push().setValue(chatPojo);
             duracionP.setText("");
