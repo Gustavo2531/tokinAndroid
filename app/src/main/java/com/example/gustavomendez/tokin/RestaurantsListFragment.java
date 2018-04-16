@@ -100,7 +100,7 @@ public class RestaurantsListFragment extends ListFragment {
                     for (DataSnapshot issue : dataSnapshot.getChildren()) {
                         if(r==false) {
                             Restaurant m = new Restaurant();
-                            m.name = issue.child("userName").getValue().toString();;
+                            m.name = issue.child("userName").getValue().toString();
                             m.address = issue.child("musicType").getValue().toString();
                             m.phone = issue.child("userContact").getValue().toString();
                             m.id =  issue.child("userKey").getValue().toString();
@@ -109,7 +109,7 @@ public class RestaurantsListFragment extends ListFragment {
                             //System.out.println(issue.child("musicType").toString());
                         }else{
                             Restaurant m = new Restaurant();
-                            m.name = issue.child("Restaurant").getValue().toString();;
+                            m.name = issue.child("Restaurant").getValue().toString();
                             m.address = issue.child("Address").getValue().toString();
                             m.phone = issue.child("Phone").getValue().toString();
                             m.id =  issue.child("userKey").getValue().toString();

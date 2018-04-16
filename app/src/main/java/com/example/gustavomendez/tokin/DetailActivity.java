@@ -36,7 +36,7 @@ public class DetailActivity extends Activity {
         startActivity(it);
     }
     public void clickEvaluar(View view){
-        Intent it = new Intent( DetailActivity.this, EvaluarActivity.class);
+        Intent it = new Intent( DetailActivity.this, EvaluacionesActivity.class);
         it.putExtra("id", id);
         it.putExtra("name", name);
         it.putExtra("address",dir);
@@ -45,7 +45,11 @@ public class DetailActivity extends Activity {
     }
 
     public void clickVerEvalauciones(View view){
-        Intent it = new Intent( DetailActivity.this, VerEvaluacionesActivity.class);
+        Intent it = new Intent( DetailActivity.this, EvaluacionesActivity.class);
+        it.putExtra("id", id);
+        it.putExtra("name", name);
+        it.putExtra("address",dir);
+        it.putExtra("tel",tel);
         startActivity(it);
     }
     public void clickChater(View view){

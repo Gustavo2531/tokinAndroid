@@ -114,9 +114,9 @@ public class EvaluarActivity extends Activity {
         }
         EvalPojo evalPojo;
         if(res == true ) {
-            evalPojo = new EvalPojo(""+name, ""+nomSing, keyUser.KU, nameId, nameId, keyUser.KU, id, ratingBar.getRating());
+            evalPojo = new EvalPojo(""+name, ""+nomSing, keyUser.KU, nameId, nameId, keyUser.KU, id, evaluarEdit.getText().toString(), ratingBar.getRating());
         }else{
-            evalPojo = new EvalPojo(""+nomSing, ""+name, keyUser.KU, nameId, ""+keyUser.KU, nameId, id, ratingBar.getRating());
+            evalPojo = new EvalPojo(""+nomSing, ""+name, keyUser.KU, nameId, ""+keyUser.KU, nameId, id,evaluarEdit.getText().toString(), ratingBar.getRating());
         }
         databaseReference.push().setValue(evalPojo);
         evaluarEdit.setText("");

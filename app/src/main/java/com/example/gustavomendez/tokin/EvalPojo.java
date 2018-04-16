@@ -1,14 +1,14 @@
 package com.example.gustavomendez.tokin;
 
 public class EvalPojo {
-    private String nameBand, nameRes, userIdEvaluador, userIdEvaluado, userIdBand, userIdRes, idEvent;
+    private String nameBand, nameRes, userIdEvaluador, userIdEvaluado, userIdBand, userIdRes, idEvent, comentario;
     private float rating;
 
     public EvalPojo() {
     }
 
     public EvalPojo(String nameBand, String nameRes, String userIdEvaluador, String userIdEvaluado, String userIdBand, String userIdRes,
-                    String idEvent, float rating) {
+                    String idEvent, String comentario, float rating) {
         this.nameBand = nameBand;
         this.nameRes = nameRes;
         this.userIdEvaluador = userIdEvaluador;
@@ -16,9 +16,18 @@ public class EvalPojo {
         this.rating = rating;
         this.userIdRes = userIdRes;
         this.userIdBand = userIdBand;
+        this.comentario = comentario;
         this.idEvent = idEvent;
 
 
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
     }
 
     public String getIdEvent() {
