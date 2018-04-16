@@ -161,6 +161,7 @@ public class CalendarFragment extends Fragment {
                         if(r==false) {
                             Eventos m = new Eventos();
                             m.contratado= issue.child("nameRes").getValue().toString();
+                            m.contratadoId = issue.child("userIdRes").getValue().toString();
                             String dayB = issue.child("dateB").getValue().toString();
                             Date dateToday = new Date();
 
@@ -200,6 +201,7 @@ public class CalendarFragment extends Fragment {
                             Eventos m = new Eventos();
 
                             m.contratado = issue.child("nameBand").getValue().toString();
+                            m.contratadoId = issue.child("userIdBand").getValue().toString();
                             String dayB = issue.child("dateB").getValue().toString();
                             Date dateToday = new Date();
 
@@ -255,9 +257,16 @@ public class CalendarFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                // if(isRejectedView==false) {
-                //Solicitudes nd = adapter.getItem(i);
-                //Intent intent = new Intent( getActivity(),   DetailActivity.class);
+
+                Eventos nd = adapter.getItem(i);
+                Intent intent = new Intent( getActivity(),   EvaluarActivity.class);
+                intent.putExtra("name",nd.contratado);
+                intent.putExtra("idName", nd.contratadoId);
+                intent.putExtra("id",nd.id);
+                startActivity(intent);
+
+
+
                 //if(nd.stat==false){
                 //  intent.putExtra("id",nd.userIdRes);
                 //}else{
@@ -322,6 +331,7 @@ public class CalendarFragment extends Fragment {
                         if(r==false) {
                             Eventos m = new Eventos();
                              m.contratado= issue.child("nameRes").getValue().toString();
+                            m.contratadoId = issue.child("userIdRes").getValue().toString();
                             String dayB = issue.child("dateB").getValue().toString();
                             Date dateToday = new Date();
 
@@ -361,6 +371,7 @@ public class CalendarFragment extends Fragment {
                             Eventos m = new Eventos();
 
                             m.contratado = issue.child("nameBand").getValue().toString();
+                            m.contratadoId = issue.child("userIdBand").getValue().toString();
                             String dayB = issue.child("dateB").getValue().toString();
                             Date dateToday = new Date();
 

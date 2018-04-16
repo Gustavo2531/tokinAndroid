@@ -37,6 +37,10 @@ public class DetailActivity extends Activity {
     }
     public void clickEvaluar(View view){
         Intent it = new Intent( DetailActivity.this, EvaluarActivity.class);
+        it.putExtra("id", id);
+        it.putExtra("name", name);
+        it.putExtra("address",dir);
+        it.putExtra("tel",tel);
         startActivity(it);
     }
 

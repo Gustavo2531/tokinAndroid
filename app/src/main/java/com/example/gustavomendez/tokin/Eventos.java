@@ -5,6 +5,6 @@ package com.example.gustavomendez.tokin;
  */
 
 public class Eventos {
-    public String contratado, horario, id, day;
+    public String contratado, contratadoId, horario, id, day;
 
 }
