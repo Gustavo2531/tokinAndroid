@@ -31,8 +31,7 @@ public class RestaurantAdapter extends ArrayAdapter<Restaurant> {
         namerest.setText(restaurant.name);
         address.setText(restaurant.address);
         phone.setText(restaurant.phone.toString());
-        convertView.setBackgroundResource(R.color.colorAccent);
-        
+
         return convertView;
     }
 }

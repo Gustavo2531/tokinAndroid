@@ -110,16 +110,7 @@ public class MainActivity2 extends AppCompatActivity
 
         Fragment fragment = null;
 
-        if (id == R.id.nav_messages) {
-
-            FragmentManager fragmentManager = getFragmentManager();
-            FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.uno, new MessagesFragment());
-            fragmentTransaction.commit();
-
-
-            // Handle the camera action
-        } else if (id == R.id.nav_search) {
+         if (id == R.id.nav_search) {
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction fragmentTransaction =  fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.uno, new RestaurantsListFragment());

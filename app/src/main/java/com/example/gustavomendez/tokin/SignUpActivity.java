@@ -43,7 +43,7 @@ public class SignUpActivity extends AppCompatActivity {
         //ASSIGN ID
         createUser = (Button) findViewById(R.id.createUserBtn);
         userEmailEdit = (EditText) findViewById(R.id.emailEditTextCreate);
-        userPassWordEdit = (EditText) findViewById(R.id.passEditTextCreate);
+        userPassWordEdit = (EditText) findViewById(R.id.PassEditTextCreate);
 
         //ASSIGN INSTANCES
         mDatabaseRef = FirebaseDatabase.getInstance().getReference();

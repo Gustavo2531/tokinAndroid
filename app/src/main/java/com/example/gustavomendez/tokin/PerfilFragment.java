@@ -62,6 +62,14 @@ public class PerfilFragment extends Fragment {
                 updateDetail();
             }
         });
+
+        Button button2 = (Button) rootView.findViewById(R.id.buttonComments);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewComments();
+            }
+        });
         return rootView;
     }
 
@@ -73,5 +81,10 @@ public class PerfilFragment extends Fragment {
         startActivity(it);
     }
 
+    public void viewComments() {
+
+        Intent it = new Intent( getActivity() , EvaluacionesUserActivity.class);
+        startActivity(it);
+    }
 
 }

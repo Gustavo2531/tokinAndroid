@@ -17,10 +17,6 @@
             android:icon="@drawable/magnify"
             android:title="Buscar" />
         <item
-            android:id="@+id/nav_messages"
-            android:icon="@drawable/message"
-            android:title="Mensajes" />
-        <item
         android:id="@+id/nav_requests"
         android:icon="@drawable/bullhorn"
         android:title="Solicitudes" />

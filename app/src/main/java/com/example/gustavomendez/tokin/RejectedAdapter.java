@@ -1,6 +1,7 @@
 package com.example.gustavomendez.tokin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -19,6 +20,12 @@ public class RejectedAdapter extends ArrayAdapter<Solicitudes> {
     private Context context;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
+
+
+    public RejectedAdapter(@NonNull Context context, int resource, Context context1) {
+        super(context, resource);
+        this.context = context1;
+    }
 
     public RejectedAdapter(@NonNull Context context, int resource, @NonNull List<Solicitudes> objects) {
         super(context, resource, objects);
@@ -50,6 +57,8 @@ public class RejectedAdapter extends ArrayAdapter<Solicitudes> {
                                    @Override
                                    public void onClick(View view) {
                                        databaseReference.child(solicitudes.id).child("eventStatus").setValue(2);
+                                       context.startActivity(new Intent(context, MainActivity2.class));
+
 
                                    }
                                }

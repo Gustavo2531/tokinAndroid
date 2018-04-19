@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    >
 
     <ImageView
         android:id="@+id/imageView5"
@@ -25,11 +27,10 @@
         android:layout_width="238dp"
         android:layout_height="27dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
+        android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,48 +39,46 @@
 
     <TextView
         android:id="@+id/textViewBSolicitud"
-        android:layout_width="159dp"
+        android:layout_width="141dp"
         android:layout_height="22dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/textViewNameSolicitud" />
 
     <TextView
         android:id="@+id/textViewESolicitud"
-        android:layout_width="162dp"
+        android:layout_width="144dp"
         android:layout_height="24dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/textViewBSolicitud" />
 
     <ImageButton
         android:id="@+id/imageButtonAccept"
-        android:layout_width="22dp"
-        android:layout_height="26dp"
+        android:layout_width="39dp"
+        android:layout_height="42dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonReject"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textViewESolicitud"
         app:layout_constraintTop_toBottomOf="@+id/textViewNameSolicitud"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <ImageButton
         android:id="@+id/imageButtonReject"
-        android:layout_width="22dp"
-        android:layout_height="26dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="42dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_focused"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNameSolicitud"
         app:srcCompat="@android:drawable/ic_delete" />

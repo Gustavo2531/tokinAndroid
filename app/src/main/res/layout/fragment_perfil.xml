@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gustavomendez.tokin.PerfilFragment">
+    tools:context="com.example.gustavomendez.tokin.PerfilFragment"
+    android:background="@drawable/gradient"
+    >
 
 
     <!-- TODO: Update blank fragment layout -->
@@ -18,7 +20,7 @@
         android:layout_marginTop="12dp"
         android:text="-"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/fui_bgGoogle"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +64,7 @@
         android:layout_marginTop="20dp"
         android:text="Nombre Contacto"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/fui_bgGoogle"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -71,14 +73,14 @@
 
     <TextView
         android:id="@+id/ttwo"
-        android:layout_width="130dp"
-        android:layout_height="23dp"
+        android:layout_width="132dp"
+        android:layout_height="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/fui_bgGoogle"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +96,7 @@
         android:layout_marginTop="56dp"
         android:text="-"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/fui_bgGoogle"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -103,26 +105,31 @@
 
     <Button
         android:id="@+id/buttonEditPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="468dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="236dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/background_light"
         android:text="Editar"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/four" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:id="@+id/buttonComments"
+        android:layout_width="468dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="176dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="88dp"
+        android:background="@android:color/background_light"
         android:text="Ver Comentarios"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.228"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/four" />
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"

@@ -10,15 +10,17 @@
 
     <Button
         android:id="@+id/buttonAgregarEvento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_width="468dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:background="@android:color/background_light"
         android:text="Agregar Evento"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewEventos" />
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ListView
         android:id="@+id/listViewEventos"
@@ -26,33 +28,38 @@
         android:layout_height="395dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonEventos" />
 
     <Button
         android:id="@+id/buttonEventos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="2dp"
+        android:layout_width="468dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="552dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/background_light"
         android:text="Confirmados"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonPasados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginTop="2dp"
+        android:layout_width="468dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="616dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/background_light"
         android:text="Eventos Pasados"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
 

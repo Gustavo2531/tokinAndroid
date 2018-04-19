@@ -77,6 +77,7 @@ public class RequestsFragment extends Fragment {
                                     isRejectedView = false;
                                     clean();
                                     loadListView();
+
                                 }
                             }
 
@@ -90,10 +91,13 @@ public class RequestsFragment extends Fragment {
                                                      System.out.println(isRejectedView);
                                                      clean();
                                                      loadListView();
+
+
                                                  }
                                              }
 
         );
+
 
     }
 

@@ -3,46 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gustavomendez.tokin.PerfilFragment">
-
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context="com.example.gustavomendez.tokin.PerfilFragment"
+    android:background="@drawable/gradient">
 
 
     <ImageView
         android:id="@+id/imageDetail"
-        android:layout_width="173dp"
-        android:layout_height="136dp"
+        android:layout_width="281dp"
+        android:layout_height="241dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:src="@drawable/help"
+        android:src="@drawable/chatb"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="87dp" />
+        tools:layout_editor_absoluteY="25dp" />
 
     <Button
         android:id="@+id/buttonEditPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginTop="172dp"
-        android:text="ChatBot"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_width="468dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="172dp"
-        android:text="Preguntas Frecuentes"
+        android:background="@android:color/background_light"
+        android:text="INICIAR CHAT"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -50,6 +38,25 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="192dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="292dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="288dp"
+        android:background="@color/icon_orange_color"
+        android:text="Si tienes alguna duda puedes preguntarme :)"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
 
 </android.support.constraint.ConstraintLayout>
 

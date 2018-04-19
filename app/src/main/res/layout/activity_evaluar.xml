@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gustavomendez.tokin.EvaluarActivity">
+    tools:context="com.example.gustavomendez.tokin.EvaluarActivity"
+    android:background="@drawable/gradient">
 
 
     <TextView
@@ -16,7 +17,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Califica al lugar"
+        android:textAlignment="center"
         android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +36,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/colorPrimary"
         android:numStars="5"
         android:stepSize="1.0"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,20 +47,19 @@
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="468dp"
+        android:layout_height="39dp"
         android:layout_below="@+id/ratingBar"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="144dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:background="@android:color/background_light"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818" />
+        app:layout_constraintHorizontal_bias="0.327"
+
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextEvaluar"
@@ -71,6 +72,7 @@
         android:ems="10"
         android:hint="Emite un comentario"
         android:inputType="textMultiLine"
+        android:textColor="@color/aidialog_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -83,13 +85,14 @@
         android:layout_width="220dp"
         android:layout_height="39dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
