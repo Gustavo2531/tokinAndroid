@@ -14,15 +14,18 @@
         android:layout_height="33dp"
         android:layout_marginBottom="8dp"
 
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Hora Inicio"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082"
-        tools:layout_editor_absoluteX="149dp" />
+        app:layout_constraintVertical_bias="0.082" />
 
     <Button
         android:id="@+id/buttonAccionSolicitar"
@@ -44,14 +47,20 @@
         android:id="@+id/textViewDateEventP"
         android:layout_width="150dp"
         android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="112dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="188dp"
         android:text="Dia"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button8"
@@ -60,13 +69,16 @@
         android:layout_marginBottom="404dp"
         android:layout_marginEnd="48dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/background_light"
         android:onClick="onButtonClicked"
         android:text="Elegir Día"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.327"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
 
     <Button
         android:id="@+id/button9"
@@ -75,13 +87,16 @@
         android:layout_marginBottom="532dp"
         android:layout_marginEnd="48dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/background_light"
         android:onClick="onButtonClickedTime"
         android:text="Elegir Hora Inicial"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editTextDuracionP"

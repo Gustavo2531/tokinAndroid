@@ -22,13 +22,15 @@ public class ForgotPasswordActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
         forgotPassword = (Button) findViewById(R.id.forgot);
-        userEmailEdit = (EditText) findViewById(R.id.loginEmailEditText);
+        userEmailEdit = (EditText) findViewById(R.id.emailEditTextCreate2);
+
         mAuth = FirebaseAuth.getInstance();
 
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String emailAddress =  userEmailEdit.getText().toString();
+
+                final String emailAddress =  userEmailEdit.getText().toString();
 
 
                 mAuth.sendPasswordResetEmail(emailAddress)

@@ -31,7 +31,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     //FIREBASE AUTHENTICATION FIELDS
     FirebaseAuth mAuth;
-    FirebaseAuth.AuthStateListener mAuthListener;
 
     DatabaseReference mDatabaseRef, mUserCheckData;
 
@@ -51,30 +50,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-
-                    mUserCheckData.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-
-                           //checkUserValidation(dataSnapshot, emailForVer);
-
-                        }
-
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-
-                }
-
-
-
-        };
 
 
         createUser.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +82,6 @@ public class SignUpActivity extends AppCompatActivity {
                                 Toast.makeText(SignUpActivity.this, "Us*er Account Created", Toast.LENGTH_LONG).show();
 
 
-                               // startActivity(new Intent(SignUpActivity.this, ProfileBanda.class));
 
                             } else {
                                 Toast.makeText(SignUpActivity.this, "Failed to create User Account", Toast.LENGTH_LONG).show();
@@ -126,51 +101,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    private void checkUserValidation(DataSnapshot dataSnapshot, String emailForVer) {
 
 
-        Iterator iterator = dataSnapshot.getChildren().iterator();
-
-        while (iterator.hasNext())
-        {
-
-            DataSnapshot dataUser = (DataSnapshot) iterator.next();
-
-            if( dataUser.child("emailUser").getValue().toString().equals(emailForVer))
-            {
-
-                if (dataUser.child("isVerified").getValue().toString().equals("unverified"))
-                {
-
-                    Intent in = new Intent( SignUpActivity.this, ProfileBanda.class);
-                    in.putExtra("USER_KEY" , dataUser.child("userKey").getValue().toString());
-                    startActivity(in);
-
-                }else
-                {
-
-                    startActivity(new Intent(SignUpActivity.this, MainActivity2.class));
-
-                }
-
-            }
-
-        }
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        //ON ACTIVITY START CHECK USER AUTHENTICATION
-        mAuth.addAuthStateListener(mAuthListener);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        //REMOVE THE LISTENER ON ACTIVITY STOP
-        mAuth.removeAuthStateListener(mAuthListener);
-    }
 }

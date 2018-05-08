@@ -32,15 +32,7 @@
         <activity android:name=".SolicitarActivity" />
         <activity android:name=".AgregarEventoActivity" />
         <activity android:name=".ProfileBanda" />
-        <activity
-            android:name=".VerEvaluacionesActivity"
-            android:label="@string/title_activity_ver_evaluaciones"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EvaluarActivity" />
-        <activity
-            android:name=".ChatActivity"
-            android:label="@string/title_activity_chat"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".BandOrRestaurantActivity" />
         <activity android:name=".ProfileRestaurante" />
 

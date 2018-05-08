@@ -138,7 +138,6 @@ public class RestaurantsListFragment extends ListFragment {
                 intent.putExtra("name", nd.name);
                 intent.putExtra("address",nd.address);
                 intent.putExtra("tel",nd.phone);
-
                 startActivity(intent);
                 //Toast.makeText(getApplicationContext(),nd.id, Toast.LENGTH_LONG).show();
             }

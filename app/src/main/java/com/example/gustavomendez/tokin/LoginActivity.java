@@ -52,41 +52,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-
-                if (user != null)
-                {
-
-                    final String emailForVer = user.getEmail();
-
-                    mDatabaseRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-
-                            checkUserValidation(dataSnapshot, emailForVer);
-
-                        }
-
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-
-                }else
-                {
-
-
-
-                }
-
-
-            }
-        };
 
 
 
@@ -122,9 +88,9 @@ public class LoginActivity extends AppCompatActivity {
                                     @Override
                                     public void onDataChange(DataSnapshot dataSnapshot) {
 
-                                        checkUserValidation(dataSnapshot, userEmailString);
+                                        checkUserValidation(dataSnapshot, userEmailString);}
 
-                                    }
+
 
                                     @Override
                                     public void onCancelled(DatabaseError databaseError) {
@@ -159,29 +125,30 @@ public class LoginActivity extends AppCompatActivity {
         {
 
             DataSnapshot dataUser = (DataSnapshot) iterator.next();
+            if(emailForVer != null && !emailForVer.isEmpty() &&
+                    dataUser.child("emailUser").getValue()!= null) {
+                if (dataUser.child("emailUser").getValue().toString().equals(emailForVer)) {
 
-            if( dataUser.child("emailUser").getValue().toString().equals(emailForVer))
-            {
+                    if (dataUser.child("isVerified").getValue().toString().equals("unverified")) {
+                        KeyUser keyUser = new KeyUser();
+                        keyUser.KU = dataUser.child("userKey").getValue().toString();
+                        Intent in = new Intent(LoginActivity.this, BandOrRestaurantActivity.class);
+                        in.putExtra("USER_KEY", dataUser.child("userKey").getValue().toString());
 
-                if (dataUser.child("isVerified").getValue().toString().equals("unverified"))
-                {
-                    KeyUser keyUser = new KeyUser();
-                    keyUser.KU = dataUser.child("userKey").getValue().toString();
-                    Intent in = new Intent( LoginActivity.this, BandOrRestaurantActivity.class);
-                    in.putExtra("USER_KEY" , dataUser.child("userKey").getValue().toString());
+                        startActivity(in);
+                        finish();
 
-                    startActivity(in);
+                    } else {
+                        KeyUser keyUser = new KeyUser();
 
-                }else
-                {
-                    KeyUser keyUser = new KeyUser();
+                        keyUser.KU = dataUser.child("userKey").getValue().toString();
+                        keyUser.start();
 
-                    keyUser.KU = dataUser.child("userKey").getValue().toString();
-                    keyUser.start();
+                        startActivity(new Intent(LoginActivity.this, MainActivity2.class));
+                        finish();
+                    }
 
-                    startActivity(new Intent(LoginActivity.this, MainActivity2.class));
                 }
-
             }
 
         }
@@ -190,17 +157,5 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
 
-        mAuth.addAuthStateListener(mAuthListener);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        mAuth.removeAuthStateListener(mAuthListener);
-    }
 }
